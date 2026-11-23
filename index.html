@@ -9,9 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-/* ============================================
-   SISTEMA DE DESIGN — VISÃO DO CAOS
-   ============================================ */
 :root {
   --creme: #f3f2e7;
   --bege: #ceb7ab;
@@ -47,17 +44,16 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.35;
+  opacity: 0.4;
   background-image: url('assets/textura-papel.png');
-  background-size: cover;
+  background-size: 400px 400px;
   background-repeat: repeat;
   mix-blend-mode: multiply;
 }
 
-/* TIPOGRAFIA */
 h1, h2, h3, h4 {
   font-family: var(--titulo);
-  font-weight: 400; /* Archivo Black já é a variação mais pesada */
+  font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -96,13 +92,10 @@ section { padding: var(--s-7) 0; position: relative; }
   color: var(--tinta); text-decoration: none; letter-spacing: -0.02em;
   display: flex; align-items: center; gap: 0.5rem;
 }
-.logo-mark {
-  width: 28px; height: 28px; background: var(--terracota); border-radius: 50%;
-  position: relative; display: inline-block;
-}
-.logo-mark::after {
-  content: ''; position: absolute; inset: 4px; background: var(--creme);
-  border-radius: 50%; clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 .nav { display: flex; gap: var(--s-3); align-items: center; }
 .nav a {
@@ -133,20 +126,55 @@ section { padding: var(--s-7) 0; position: relative; }
 .hero {
   min-height: 100vh; padding-top: 10rem; padding-bottom: var(--s-6);
   display: flex; align-items: center; position: relative; overflow: hidden;
+  background: var(--marrom);
 }
 .hero-content {
   display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); align-items: center;
 }
+
+/* Título reorganizado */
+.hero-text h1 {
+  line-height: 0.9;
+  display: inline-block;
+}
+
 .hero-text h1 .accent {
-  color: var(--terracota); display: inline-block; position: relative;
+  color: var(--terracota);
+  display: inline-block;
+  position: relative;
+  z-index: 2;
 }
+
+/* Risco rebelde atrás de "Caos" */
+.hero-text h1 .accent::before {
+  content: '';
+  position: absolute;
+  left: -5%;
+  bottom: 0.15em;
+  width: 110%;
+  height: 0.25em;
+  background: var(--ocre);
+  z-index: -1;
+  transform: skewX(-12deg) rotate(-2deg);
+  clip-path: polygon(0 20%, 100% 0, 98% 100%, 2% 80%);
+}
+
 .hero-text h1 .accent::after {
-  content: ''; position: absolute; left: 0; bottom: 0.1em; width: 100%; height: 0.15em;
-  background: var(--ocre); z-index: -1; transform: skewX(-8deg);
+  content: '';
+  position: absolute;
+  left: 2%;
+  bottom: 0.1em;
+  width: 95%;
+  height: 0.15em;
+  background: var(--ocre);
+  z-index: -1;
+  transform: skewX(-8deg) rotate(1deg);
+  opacity: 0.6;
 }
+
 .hero-sub {
   font-size: clamp(1.1rem, 1.4vw, 1.4rem); font-weight: 300;
-  color: var(--tinta-suave); margin-top: var(--s-3); max-width: 50ch;
+  color: var(--creme); margin-top: var(--s-3); max-width: 50ch;
 }
 .hero-meta { margin-top: var(--s-4); display: flex; gap: var(--s-3); flex-wrap: wrap; align-items: center; }
 .hero-cta {
@@ -165,32 +193,39 @@ section { padding: var(--s-7) 0; position: relative; }
 .hero-cta:hover svg { transform: translateX(4px); }
 
 .hero-secondary {
-  color: var(--tinta); text-decoration: none; font-weight: 500;
+  color: var(--creme); text-decoration: none; font-weight: 500;
   text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem;
-  border-bottom: 1px solid var(--tinta); padding-bottom: 2px;
+  border-bottom: 1px solid var(--creme); padding-bottom: 2px;
 }
 
 .hero-visual { position: relative; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
 .hero-img-acordar {
   width: 100%; max-width: 500px;
   transform: rotate(-3deg);
-  filter: drop-shadow(8px 8px 0px rgba(163, 69, 69, 0.2));
   transition: transform 0.5s ease;
 }
 .hero-img-acordar:hover { transform: rotate(0deg) scale(1.02); }
 
+/* Divisória de arame */
+.divisoria-arame {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.6;
+}
+
 /* PROPÓSITO */
-.proposito { background: var(--tinta); color: var(--creme); position: relative; overflow: hidden; }
+.proposito { background: var(--marrom); color: var(--creme); position: relative; overflow: hidden; }
 .proposito-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--s-6); align-items: start; }
 .proposito h2 .line { display: block; }
 .proposito h2 .line.alt { color: var(--ocre); font-style: italic; }
-.proposito-texto p { color: rgba(243, 242, 231, 0.85); font-size: 1.15rem; margin-bottom: var(--s-2); line-height: 1.7; }
+.proposito-texto p { color: rgba(243, 242, 231, 0.9); font-size: 1.15rem; margin-bottom: var(--s-2); line-height: 1.7; }
 .proposito-texto p strong { color: var(--ocre); font-weight: 600; }
 
 .manifesto-banner {
   margin-top: var(--s-5); width: 100%; max-width: 800px;
   transform: rotate(-1deg);
-  filter: drop-shadow(4px 4px 0px rgba(247, 209, 105, 0.2));
 }
 
 .proposito-valores {
@@ -201,7 +236,10 @@ section { padding: var(--s-7) 0; position: relative; }
 .valor p { font-size: 0.9rem; color: rgba(243, 242, 231, 0.7); line-height: 1.5; }
 
 /* TERRITÓRIOS */
-.territorios-header { text-align: center; margin-bottom: var(--s-6); max-width: 800px; margin: 0 auto var(--s-6); }
+.territorios { background: var(--creme); }
+.territorios-header { text-align: center; margin-bottom: var(--s-6); max-width: 800px; margin-left: auto; margin-right: auto; }
+.territorios-header h2 { margin-bottom: var(--s-2); }
+.territorios-header p { margin: 0 auto; color: var(--tinta-suave); }
 .territorios-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--s-2); }
 .territorio {
   position: relative; padding: var(--s-3); min-height: 420px;
@@ -235,8 +273,10 @@ section { padding: var(--s-7) 0; position: relative; }
 .t-sentir .tag { background: rgba(31,26,22,0.15); }
 
 /* PROCESSO */
-.processo { background: var(--bege); position: relative; overflow: hidden; }
+.processo { background: var(--marrom); position: relative; overflow: hidden; }
 .processo-header { margin-bottom: var(--s-5); max-width: 700px; }
+.processo-header h2 { color: var(--creme); }
+.processo-header p { color: rgba(243,242,231,0.8); }
 .processo-fluxo { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); position: relative; }
 .etapa {
   background: var(--creme); padding: var(--s-3); position: relative; border-radius: 2px;
@@ -255,10 +295,10 @@ section { padding: var(--s-7) 0; position: relative; }
   margin-top: var(--s-5); width: 100%; max-width: 700px;
   margin-left: auto; margin-right: auto; display: block;
   transform: rotate(2deg);
-  filter: drop-shadow(6px 6px 0px rgba(163, 69, 69, 0.15));
 }
 
 /* CONTEÚDO */
+.conteudo { background: var(--creme); }
 .conteudo-header { display: flex; justify-content: space-between; align-items: end; margin-bottom: var(--s-5); flex-wrap: wrap; gap: var(--s-2); }
 .conteudo-tabs { display: flex; gap: var(--s-1); flex-wrap: wrap; }
 .tab {
@@ -309,21 +349,34 @@ section { padding: var(--s-7) 0; position: relative; }
 .produto-preco { font-weight: 700; color: var(--terracota); }
 
 /* CRIADOR */
-.criador { background: var(--ocre); color: var(--tinta); position: relative; overflow: hidden; }
+.criador { background: var(--marrom); color: var(--creme); position: relative; overflow: hidden; }
 .criador-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--s-6); align-items: center; }
-.criador p { font-size: 1.15rem; margin-bottom: var(--s-3); max-width: 55ch; }
+.criador p { font-size: 1.15rem; margin-bottom: var(--s-3); max-width: 55ch; color: rgba(243,242,231,0.9); }
 .criador-lista { list-style: none; margin: var(--s-3) 0; }
 .criador-lista li {
-  padding: 0.6rem 0; border-bottom: 1px solid rgba(31,26,22,0.15);
+  padding: 0.6rem 0; border-bottom: 1px solid rgba(243,242,231,0.2);
   display: flex; align-items: center; gap: 0.8rem; font-weight: 500;
 }
-.criador-lista li::before { content: '→'; color: var(--terracota); font-weight: 700; font-size: 1.2rem; }
+.criador-lista li::before { content: '→'; color: var(--ocre); font-weight: 700; font-size: 1.2rem; }
 
 .criador-olho {
   width: 100%; max-width: 400px;
   transform: rotate(-5deg);
-  filter: drop-shadow(8px 8px 0px rgba(163, 69, 69, 0.2));
   margin: 0 auto; display: block;
+}
+
+/* Sol decorativo */
+.sol-decorativo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.sol-top-right {
+  top: var(--s-4);
+  right: var(--s-4);
 }
 
 /* NEWSLETTER */
@@ -414,6 +467,10 @@ section { padding: var(--s-7) 0; position: relative; }
     transform: translateY(-120%); transition: transform 0.4s ease;
     border-bottom: 1px solid rgba(31,26,22,0.1); align-items: flex-start;
   }
+  .nav a {
+    font-family: var(--titulo);
+    font-size: 1.2rem;
+  }
   .nav.active { transform: translateY(0); }
   .menu-toggle { display: block; }
   .hero-content, .proposito-grid, .materialidade-grid, .criador-grid { grid-template-columns: 1fr; gap: var(--s-4); }
@@ -441,11 +498,11 @@ section { padding: var(--s-7) 0; position: relative; }
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
     <a href="#topo" class="logo" aria-label="Visão do Caos - Início">
-      <span class="logo-mark"></span><span>Visão do Caos</span>
+      <img src="assets/olho-ilustracao.png" alt="Logo Visão do Caos" class="logo-img">
+      <span>Visão do Caos</span>
     </a>
     <nav class="nav" id="nav" aria-label="Navegação principal">
       <a href="#proposito">Propósito</a>
@@ -461,12 +518,13 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="topo">
   <div class="container hero-content">
     <div class="hero-text reveal">
-      <span class="eyebrow">Plataforma autoral de cultura, arte e pensamento</span>
-      <h1>Do <span class="accent">caos</span><br>à forma.</h1>
+      <span class="eyebrow" style="color: var(--ocre);">Plataforma autoral de cultura, arte e pensamento</span>
+      <h1>
+        Do <span class="accent">Caos</span> à Forma.
+      </h1>
       <p class="hero-sub">Observamos o mundo como ele é — contraditório, vivo, urgente — e transformamos essa matéria bruta em conteúdo, criações, produtos e experiências.</p>
       <div class="hero-meta">
         <a href="#territorios" class="hero-cta">
@@ -482,7 +540,8 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- PROPÓSITO -->
+<img src="assets/arame.png" alt="" class="divisoria-arame">
+
 <section class="proposito" id="proposito">
   <div class="container proposito-grid">
     <div class="reveal">
@@ -512,7 +571,6 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- TERRITÓRIOS -->
 <section class="territorios" id="territorios">
   <div class="container">
     <div class="territorios-header reveal">
@@ -555,13 +613,14 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- PROCESSO -->
+<img src="assets/arame.png" alt="" class="divisoria-arame">
+
 <section class="processo" id="processo">
   <div class="container">
     <div class="processo-header reveal">
-      <span class="eyebrow">Como a gente faz</span>
+      <span class="eyebrow" style="color: var(--ocre);">Como a gente faz</span>
       <h2>Do caos à forma — em quatro movimentos.</h2>
-      <p style="color: var(--tinta-suave); margin-top: 1rem;">Não existe fórmula, existe método. Cada projeto nasce de uma observação e termina em algo que pode ser visto, ouvido, lido ou tocado.</p>
+      <p style="color: rgba(243,242,231,0.8); margin-top: 1rem;">Não existe fórmula, existe método. Cada projeto nasce de uma observação e termina em algo que pode ser visto, ouvido, lido ou tocado.</p>
     </div>
     <div class="processo-fluxo">
       <div class="etapa reveal"><div class="etapa-num">01</div><h3>Caos</h3><p>A matéria bruta. A cidade, a vida cotidiana, as contradições, os conflitos.</p><span class="seta-fluxo">→</span></div>
@@ -574,7 +633,6 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- CONTEÚDO -->
 <section class="conteudo" id="conteudo">
   <div class="container">
     <div class="conteudo-header reveal">
@@ -607,7 +665,6 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- MATERIALIDADE -->
 <section class="materialidade" id="colecoes">
   <div class="container materialidade-grid">
     <div class="reveal">
@@ -641,11 +698,11 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- CRIADOR -->
 <section class="criador" id="criador">
+  <img src="assets/sol.png" alt="" class="sol-decorativo sol-top-right">
   <div class="container criador-grid">
     <div class="reveal">
-      <span class="eyebrow">Para quem cria</span>
+      <span class="eyebrow" style="color: var(--ocre);">Para quem cria</span>
       <h2>Se o seu trabalho<br>incomoda, ele nos<br>interessa.</h2>
       <p>A Visão do Caos é um território aberto para artistas, designers, músicos, escritores e criadores independentes que querem ser vistos sem abrir mão da própria identidade.</p>
       <ul class="criador-lista">
@@ -662,7 +719,6 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section class="newsletter" id="newsletter">
   <div class="container newsletter-inner reveal">
     <span class="eyebrow">Fique por dentro</span>
@@ -676,12 +732,14 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <a href="#topo" class="logo" style="color: var(--creme); margin-bottom: 1rem;"><span class="logo-mark"></span><span>Visão do Caos</span></a>
+        <a href="#topo" class="logo" style="color: var(--creme); margin-bottom: 1rem;">
+          <img src="assets/olho-ilustracao.png" alt="Logo Visão do Caos" class="logo-img" style="filter: brightness(0) invert(1);">
+          <span>Visão do Caos</span>
+        </a>
         <p>Plataforma autoral independente de arte, cultura e pensamento. Do caos à forma.</p>
         <p class="footer-assinatura" style="margin-top: 1rem;">Um trabalho por Monge do Caos</p>
       </div>
@@ -696,7 +754,6 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </footer>
 
-<!-- MODAL -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()" aria-label="Fechar">×</button>
