@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Visão do Caos — Plataforma autoral de arte, cultura e pensamento. Do caos à forma.">
-<title>Visão do Caos — Do caos à forma</title>
+<meta name="description" content="Visão do Caos: Plataforma autoral de arte, cultura e pensamento. Do caos à forma.">
+<title>Visão do Caos: Do caos à forma</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -408,7 +408,7 @@ section { padding: var(--s-7) 0; position: relative; }
   font-size: 0.75rem; border-radius: 2px; text-transform: uppercase; letter-spacing: 0.05em;
 }
 
-/* MODAL CARROSSEL — TERRITÓRIO VER */
+/* MODAL CARROSSEL: TERRITÓRIO VER */
 .modal-carrossel .modal-content {
   max-width: 900px;
   background: var(--terracota);
@@ -503,9 +503,9 @@ section { padding: var(--s-7) 0; position: relative; }
   color: rgba(243,242,231,0.85);
 }
 
-/* MODAL VITRINE MUSICAL — TERRITÓRIO OUVIR */
+/* MODAL VITRINE MUSICAL: TERRITÓRIO OUVIR */
 .modal-ouvir .modal-content {
-  max-width: 950px;
+  max-width: 720px;
   background: var(--ocre);
   padding: var(--s-4);
   color: var(--tinta);
@@ -519,169 +519,19 @@ section { padding: var(--s-7) 0; position: relative; }
   color: var(--creme);
 }
 
-.vitrine-grid {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: var(--s-4);
-  align-items: start;
-}
-
-.vitrine-capa {
-  position: relative;
-  aspect-ratio: 1;
-  background: var(--tinta);
-  border-radius: 2px;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(31,26,22,0.3);
-}
-.vitrine-capa img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.vitrine-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-2);
-}
-
-.vitrine-info .faixa-titulo {
-  font-family: var(--titulo);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 0.95;
-  color: var(--tinta);
-  margin-bottom: 0.2rem;
-  letter-spacing: -0.02em;
-}
-
-.vitrine-info .faixa-subtitulo {
-  font-family: var(--corpo);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--tinta-suave);
-  margin-bottom: var(--s-2);
-}
-.vitrine-info .faixa-subtitulo strong {
-  color: var(--terracota);
-  font-weight: 700;
-}
-
-/* PLAYER CUSTOMIZADO */
-.player-container {
-  background: var(--creme);
-  padding: var(--s-3);
-  border-radius: 2px;
-  border: 2px solid var(--tinta);
-}
-.player-controles {
-  display: flex;
-  align-items: center;
-  gap: var(--s-2);
-  margin-bottom: var(--s-2);
-}
-.player-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--terracota);
-  color: var(--creme);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-  flex-shrink: 0;
-}
-.player-btn:hover {
-  background: var(--tinta);
-  transform: scale(1.05);
-}
-.player-btn svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
-}
-.player-info {
-  flex: 1;
-  min-width: 0;
-}
-.player-info .faixa-atual {
-  font-family: var(--titulo);
-  font-size: 0.9rem;
-  color: var(--tinta);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.player-info .tempo {
-  font-size: 0.8rem;
-  color: var(--tinta-suave);
-  font-variant-numeric: tabular-nums;
-  margin-top: 0.2rem;
-}
-.player-barra-container {
-  width: 100%;
-  height: 8px;
-  background: var(--bege);
-  border-radius: 4px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.player-barra-progresso {
-  height: 100%;
-  background: var(--terracota);
-  width: 0%;
-  transition: width 0.1s linear;
-  border-radius: 4px;
-}
-.player-barra-container:hover .player-barra-progresso {
-  background: var(--tinta);
-}
-
-/* CRÉDITOS DETALHADOS */
-.creditos-detalhe {
-  margin-top: var(--s-2);
-  padding-top: var(--s-2);
-  border-top: 1px solid rgba(31,26,22,0.2);
-  font-size: 0.8rem;
-  color: var(--tinta-suave);
-  line-height: 1.7;
-}
-.creditos-detalhe p {
-  margin-bottom: 0.2rem;
-  font-size: 0.8rem;
-}
-.creditos-detalhe strong {
-  color: var(--tinta);
-  font-weight: 600;
-}
-.creditos-detalhe .separador {
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background: var(--terracota);
-  border-radius: 50%;
-  margin: 0 0.5rem;
-  vertical-align: middle;
-}
-
-/* MENSAGEM — OUVIR O EP NA ÍNTEGRA (ATUALIZADA) */
+/* MENSAGEM DE CONVITE (acima do embed) */
 .mensagem-ep {
-  margin-top: var(--s-4);
   background: var(--tinta);
   color: var(--creme);
-  padding: var(--s-4) var(--s-5);
+  padding: var(--s-4) var(--s-4) var(--s-3);
   border-radius: 2px;
   text-align: center;
-  border-top: 4px solid var(--ocre);
+  border-top: 4px solid var(--terracota);
+  margin-bottom: var(--s-3);
 }
 .mensagem-ep-icon {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   background: var(--terracota);
   border-radius: 50%;
   display: flex;
@@ -690,26 +540,112 @@ section { padding: var(--s-7) 0; position: relative; }
   margin: 0 auto var(--s-2);
 }
 .mensagem-ep-icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   fill: var(--creme);
 }
 .mensagem-ep-texto h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--ocre);
-  margin-bottom: var(--s-2);
+  margin-bottom: var(--s-1);
   letter-spacing: 0.08em;
 }
 .mensagem-ep-texto p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: rgba(243,242,231,0.9);
   line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 520px;
+  margin: 0 auto var(--s-3);
 }
 .mensagem-ep-texto p strong {
   color: var(--ocre);
   font-weight: 700;
+}
+
+/* BOTÕES DA VITRINE */
+.btn-vitrine {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--ocre);
+  color: var(--tinta);
+  padding: 0.9rem 1.8rem;
+  text-decoration: none;
+  font-family: var(--corpo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-vitrine:hover {
+  background: var(--creme);
+  transform: translateY(-2px);
+}
+.btn-vitrine svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.btn-conheca {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--tinta);
+  color: var(--creme);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-family: var(--corpo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--tinta);
+}
+.btn-conheca:hover {
+  background: var(--terracota);
+  border-color: var(--terracota);
+  transform: translateY(-2px);
+}
+.btn-conheca svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* SPOTIFY EMBED */
+.spotify-embed {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(31,26,22,0.15);
+}
+.spotify-embed iframe {
+  display: block;
+  width: 100%;
+}
+
+/* AÇÕES ABAIXO DO EMBED */
+.vitrine-acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+}
+.vitrine-acoes .acoes-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--tinta-suave);
+  letter-spacing: 0.05em;
 }
 
 /* ANIMAÇÕES */
@@ -723,7 +659,6 @@ section { padding: var(--s-7) 0; position: relative; }
   .card-1 { grid-column: 1 / span 2; grid-row: auto; }
   .card-4 { grid-column: 1 / span 2; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .vitrine-grid { grid-template-columns: 200px 1fr; }
 }
 @media (max-width: 768px) {
   :root { --s-7: 5rem; --s-6: 3.5rem; }
@@ -746,17 +681,13 @@ section { padding: var(--s-7) 0; position: relative; }
   .produtos { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
-
-  .vitrine-grid { grid-template-columns: 1fr; }
-  .vitrine-capa { max-width: 220px; margin: 0 auto; }
 }
 @media (max-width: 480px) {
   .hero { padding-top: 6rem; }
   .newsletter-form { flex-direction: column; }
   .newsletter-form button { width: 100%; }
-  .player-btn { width: 48px; height: 48px; }
-  .vitrine-info .faixa-titulo { font-size: 1.8rem; }
   .mensagem-ep { padding: var(--s-3); }
+  .btn-vitrine, .btn-conheca { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
@@ -769,7 +700,7 @@ section { padding: var(--s-7) 0; position: relative; }
 
 <header class="header">
   <div class="container header-inner">
-    <a href="#topo" class="logo" aria-label="Visão do Caos - Início">
+    <a href="#topo" class="logo" aria-label="Visão do Caos: Início">
       <img src="assets/olho-ilustracao.png" alt="Logo Visão do Caos" class="logo-img">
       <span>Visão do Caos</span>
     </a>
@@ -795,7 +726,7 @@ section { padding: var(--s-7) 0; position: relative; }
         <span class="line">Do <span class="accent">Caos</span></span>
         <span class="line">À Forma.</span>
       </h1>
-      <p class="hero-sub">Observamos o mundo como ele é. Transformamos essa matéria bruta contraditória, viva e urgente em conteúdo, criações, produtos e experiências.</p>
+      <p class="hero-sub">Observamos o mundo como ele é: contraditório, vivo, urgente. Transformamos essa matéria bruta em conteúdo, criações, produtos e experiências.</p>
       <div class="hero-meta">
         <a href="#territorios" class="hero-cta">
           <span>Explorar territórios</span>
@@ -805,7 +736,7 @@ section { padding: var(--s-7) 0; position: relative; }
       </div>
     </div>
     <div class="hero-visual reveal">
-      <img src="assets/olho-ilustracao.png" alt="Logo Visão do Caos - Olho ilustrado" class="hero-img-olho">
+      <img src="assets/olho-ilustracao.png" alt="Logo Visão do Caos: Olho ilustrado" class="hero-img-olho">
     </div>
   </div>
 </section>
@@ -883,14 +814,14 @@ section { padding: var(--s-7) 0; position: relative; }
   <div class="container">
     <div class="processo-header reveal">
       <span class="eyebrow" style="color: var(--ocre);">Como a gente faz</span>
-      <h2>Do caos à forma — em quatro movimentos.</h2>
+      <h2>Do caos à forma em quatro movimentos.</h2>
       <p style="color: rgba(243,242,231,0.8); margin-top: 1rem;">Não existe fórmula, existe método. Cada projeto nasce de uma observação e termina em algo que pode ser visto, ouvido, lido ou tocado.</p>
     </div>
     <div class="processo-fluxo">
       <div class="etapa reveal"><div class="etapa-num">01</div><h3>Caos</h3><p>A matéria bruta. A cidade, a vida cotidiana, as contradições, os conflitos.</p><span class="seta-fluxo">→</span></div>
       <div class="etapa reveal"><div class="etapa-num">02</div><h3>Percepção</h3><p>O olhar que interpreta. O que se vê quando se observa com atenção e curiosidade.</p><span class="seta-fluxo">→</span></div>
       <div class="etapa reveal"><div class="etapa-num">03</div><h3>Criação</h3><p>A transformação. Dar forma ao que foi percebido através de linguagens e experimentação.</p><span class="seta-fluxo">→</span></div>
-      <div class="etapa reveal"><div class="etapa-num">04</div><h3>Expressão</h3><p>O que chega no outro. Conteúdo, obra, produto, experiência — algo que atravessa.</p></div>
+      <div class="etapa reveal"><div class="etapa-num">04</div><h3>Expressão</h3><p>O que chega no outro. Conteúdo, obra, produto, experiência: algo que atravessa.</p></div>
     </div>
   </div>
 </section>
@@ -915,9 +846,9 @@ section { padding: var(--s-7) 0; position: relative; }
         <div class="card-bg" style="background: linear-gradient(135deg, #f7d169 0%, #ceb7ab 100%);"></div>
         <div class="card-content"><span class="card-tag">Ver · Visual</span><h3>Grafismos do corpo.</h3></div>
       </article>
-      <article class="card card-3 reveal" data-categoria="ouvir" data-titulo="Ondas curtas — vol. 03" data-desc="Playlist com artistas independentes que estão redesenhando o som da periferia e do interior." data-tags="Playlist,Artistas,Independente">
+      <article class="card card-3 reveal" data-categoria="ouvir" data-titulo="Ondas curtas vol. 03" data-desc="Playlist com artistas independentes que estão redesenhando o som da periferia e do interior." data-tags="Playlist,Artistas,Independente">
         <div class="card-bg" style="background: linear-gradient(135deg, #1f1a16 0%, #a34545 100%);"></div>
-        <div class="card-content"><span class="card-tag">Ouvir · Playlist</span><h3>Ondas curtas — vol. 03.</h3></div>
+        <div class="card-content"><span class="card-tag">Ouvir · Playlist</span><h3>Ondas curtas vol. 03.</h3></div>
       </article>
       <article class="card card-4 reveal" data-categoria="ver" data-titulo="Cartazes que falam alto" data-desc="Um levantamento de cartazes independentes que circularam pela cidade nos últimos anos." data-tags="Cartaz,Design,Cultura">
         <div class="card-bg" style="background: linear-gradient(135deg, #a47864 0%, #f7d169 100%);"></div>
@@ -938,22 +869,22 @@ section { padding: var(--s-7) 0; position: relative; }
     <div class="produtos">
       <div class="produto reveal" onclick="openModal('produto-camiseta')">
         <div class="produto-visual" style="background: var(--creme);"><div class="shape"><svg viewBox="0 0 120 120" width="70%" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#a34545" stroke-width="3"><path d="M30 30 L50 20 L70 20 L90 30 L95 50 L80 55 L80 100 L40 100 L40 55 L25 50 Z"/><circle cx="60" cy="65" r="15"/></g></svg></div></div>
-        <h4>Camiseta "Matéria Bruta"</h4><p style="font-size: 0.85rem; color: var(--tinta-suave);">Algodão 100% · Serigrafia artesanal</p>
+        <h4>Camiseta Matéria Bruta</h4><p style="font-size: 0.85rem; color: var(--tinta-suave);">Algodão 100% · Serigrafia artesanal</p>
         <div class="produto-meta"><span>Coleção 01</span><span class="produto-preco">R$ 89</span></div>
       </div>
       <div class="produto reveal" onclick="openModal('produto-poster')">
         <div class="produto-visual" style="background: var(--terracota);"><div class="shape"><svg viewBox="0 0 120 120" width="70%" xmlns="http://www.w3.org/2000/svg"><g fill="#f3f2e7"><rect x="20" y="20" width="80" height="80" fill="none" stroke="#f3f2e7" stroke-width="3"/><polygon points="60,35 75,70 45,70"/><circle cx="60" cy="85" r="8"/></g></svg></div></div>
-        <h4>Pôster "Do Caos à Forma"</h4><p style="font-size: 0.85rem; color: rgba(243,242,231,0.7);">Papel offset 180g · 50x70cm</p>
+        <h4>Pôster Do Caos à Forma</h4><p style="font-size: 0.85rem; color: rgba(243,242,231,0.7);">Papel offset 180g · 50x70cm</p>
         <div class="produto-meta"><span style="color: rgba(243,242,231,0.6);">Edição limitada</span><span class="produto-preco">R$ 45</span></div>
       </div>
       <div class="produto reveal" onclick="openModal('produto-print')">
         <div class="produto-visual" style="background: var(--ocre);"><div class="shape"><svg viewBox="0 0 120 120" width="70%" xmlns="http://www.w3.org/2000/svg"><g fill="#1f1a16"><circle cx="60" cy="60" r="35" fill="none" stroke="#1f1a16" stroke-width="3"/><path d="M40 60 Q 60 30, 80 60 T 40 60" fill="#1f1a16"/><circle cx="60" cy="60" r="8" fill="#f7d169"/></g></svg></div></div>
-        <h4>Print "Olhar que Atravessa"</h4><p style="font-size: 0.85rem; color: var(--tinta-suave);">Impressão giclée · 30x40cm</p>
+        <h4>Print Olhar que Atravessa</h4><p style="font-size: 0.85rem; color: var(--tinta-suave);">Impressão giclée · 30x40cm</p>
         <div class="produto-meta"><span>Série Visual</span><span class="produto-preco">R$ 65</span></div>
       </div>
       <div class="produto reveal" onclick="openModal('produto-adesivo')">
         <div class="produto-visual" style="background: var(--marrom);"><div class="shape"><svg viewBox="0 0 120 120" width="70%" xmlns="http://www.w3.org/2000/svg"><g fill="#f3f2e7"><text x="60" y="65" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="20" font-weight="400" fill="#f3f2e7">VER</text><text x="60" y="85" text-anchor="middle" font-family="Archivo Black, sans-serif" font-size="10" font-weight="400" fill="#f7d169">PENSAR · OUVIR</text></g></svg></div></div>
-        <h4>Kit Adesivos "Territórios"</h4><p style="font-size: 0.85rem; color: rgba(243,242,231,0.7);">Vinil · Pacote com 5 unidades</p>
+        <h4>Kit Adesivos Territórios</h4><p style="font-size: 0.85rem; color: rgba(243,242,231,0.7);">Vinil · Pacote com 5 unidades</p>
         <div class="produto-meta"><span style="color: rgba(243,242,231,0.6);">Kit</span><span class="produto-preco">R$ 25</span></div>
       </div>
     </div>
@@ -1010,7 +941,7 @@ section { padding: var(--s-7) 0; position: relative; }
       <div class="footer-col"><h4>Contato</h4><ul><li><a href="#" onclick="openModal('contato'); return false;">Enviar mensagem</a></li><li><a href="#" onclick="openModal('imprensa'); return false;">Imprensa</a></li><li><a href="#" onclick="openModal('colab'); return false;">Propostas</a></li></ul></div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Visão do Caos · Todos os direitos reservados</span>
+      <span>© 2026 Visão do Caos. Todos os direitos reservados.</span>
       <span>Aluno de UX · Rede Daora · Ipiranga</span>
     </div>
   </div>
@@ -1027,7 +958,7 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </div>
 
-<!-- MODAL CARROSSEL — TERRITÓRIO VER -->
+<!-- MODAL CARROSSEL: TERRITÓRIO VER -->
 <div class="modal modal-carrossel" id="modalCarrossel" role="dialog" aria-modal="true" aria-label="Carrossel Território Ver">
   <div class="modal-content">
     <button class="modal-close" onclick="closeCarrossel()" aria-label="Fechar carrossel">×</button>
@@ -1037,13 +968,13 @@ section { padding: var(--s-7) 0; position: relative; }
     <div class="carrossel-container">
       <div class="carrossel-track" id="carrosselTrack">
         <div class="carrossel-slide">
-          <img src="assets/manifesto-acordar.jpg" alt="Hora de Acordar">
+          <img src="assets/manifesto-acordar.png" alt="Hora de Acordar">
         </div>
         <div class="carrossel-slide">
-          <img src="assets/manifesto-amor.jpg" alt="Muito por Amor, Pouco por dinheiro">
+          <img src="assets/manifesto-amor.png" alt="Muito por amor, pouco por dinheiro">
         </div>
         <div class="carrossel-slide">
-          <img src="assets/manifesto-pes.jpg" alt="Meus Pés Ainda Caminham">
+          <img src="assets/manifesto-pes.png" alt="Meus pés ainda caminham">
         </div>
       </div>
       <button class="carrossel-btn prev" onclick="moverCarrossel(-1)" aria-label="Anterior">‹</button>
@@ -1063,61 +994,39 @@ section { padding: var(--s-7) 0; position: relative; }
   </div>
 </div>
 
-<!-- MODAL VITRINE MUSICAL — TERRITÓRIO OUVIR -->
+<!-- MODAL VITRINE MUSICAL: TERRITÓRIO OUVIR -->
 <div class="modal modal-ouvir" id="modalOuvir" role="dialog" aria-modal="true" aria-label="Vitrine Musical Território Ouvir">
   <div class="modal-content">
     <button class="modal-close" onclick="closeVitrine()" aria-label="Fechar vitrine">×</button>
     <span class="modal-tag">Território Ouvir · Vitrine Musical</span>
 
-    <div class="vitrine-grid">
-      <div class="vitrine-capa">
-        <img src="assets/destaque-capahora.jpg" alt="Capa do EP Hora de Acordar - Monge do Caos">
-      </div>
-
-      <div class="vitrine-info">
-        <h3 class="faixa-titulo">Meus Pés Ainda Caminham</h3>
-        <p class="faixa-subtitulo"><strong>EP Hora de Acordar</strong>, por Monge do Caos</p>
-
-       <!-- PLAYER CUSTOMIZADO COM DIAGNÓSTICO -->
-<div class="player-container">
-  <div class="player-controles">
-    <button class="player-btn" id="playerBtn" onclick="togglePlay()" aria-label="Play/Pause">
-      <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      <svg id="iconPause" viewBox="0 0 24 24" style="display:none;"><path d="M6 4h4v16H6zm8 0h4v16h-4z"/></svg>
-    </button>
-    <div class="player-info">
-      <div class="faixa-atual" id="faixaAtual">Meus Pés Ainda Caminham</div>
-      <div class="tempo"><span id="tempoAtual">0:00</span> / <span id="tempoTotal">0:00</span></div>
-    </div>
-  </div>
-  <div class="player-barra-container" id="barraContainer" onclick="seekAudio(event)">
-    <div class="player-barra-progresso" id="barraProgresso"></div>
-  </div>
-  <!-- MENSAGEM DE ERRO (aparece só se der problema) -->
-  <div id="playerErro" style="display:none; margin-top:0.8rem; padding:0.6rem; background:#f3f2e7; border-left:3px solid #a34545; font-size:0.8rem; color:#3d342d;"></div>
-</div>
-
-<!-- ÁUDIO OCULTO -->
-<audio id="audioPlayer" src="assets/track-destaquehora.mp3" preload="metadata"></audio>
-
-        <!-- CRÉDITOS DETALHADOS -->
-        <div class="creditos-detalhe">
-          <p><strong>Instrumental:</strong> Cerq <span class="separador"></span> ThZ</p>
-          <p><strong>Captação, Mixagem e Masterização:</strong> NAM</p>
-          <p><strong>Arte:</strong> Monge do Caos</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- MENSAGEM: OUVIR O EP NA ÍNTEGRA (ATUALIZADA) -->
+    <!-- MENSAGEM DE CONVITE (acima do embed) -->
     <div class="mensagem-ep">
       <div class="mensagem-ep-icon">
         <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
       </div>
       <div class="mensagem-ep-texto">
         <h4>Ouça o EP completo</h4>
-        <p><strong>Hora de Acordar</strong> é uma obra de 3 faixas. Esta vitrine destaca a faixa 2, <strong>"Meus Pés Ainda Caminham"</strong>. Contudo, o EP inteiro carrega a intenção de transformar o caos da rotina em força e movimento. <strong>Ouça agora mesmo na íntegra.</strong></p>
+        <p><strong>Hora de Acordar</strong> é uma obra de 3 faixas. Esta vitrine destaca a faixa 2, <strong>"Meus Pés Ainda Caminham"</strong>. Contudo, o EP inteiro carrega a intenção de transformar o caos da rotina em força e movimento.</p>
+        <a href="https://onerpm.link/116009117041" target="_blank" rel="noopener noreferrer" class="btn-vitrine">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <span>Ouça agora mesmo na íntegra</span>
+        </a>
       </div>
+    </div>
+
+    <!-- SPOTIFY EMBED -->
+    <div class="spotify-embed">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/2Qh0bJT8YXSk57fCYh4D0t?utm_source=generator&si=72c483c4ce3d4bfd" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
+    <!-- AÇÕES ABAIXO DO EMBED -->
+    <div class="vitrine-acoes">
+      <span class="acoes-label">Gostou do som? Conheça quem faz:</span>
+      <a href="https://linktr.ee/mongedocaos" target="_blank" rel="noopener noreferrer" class="btn-conheca">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span>Conheça Monge do Caos</span>
+      </a>
     </div>
   </div>
 </div>
@@ -1170,7 +1079,7 @@ tabs.forEach(tab => {
   });
 });
 
-// Cards de conteúdo → modal geral
+// Cards de conteúdo -> modal geral
 cards.forEach(card => {
   card.addEventListener('click', () => {
     document.getElementById('modal-tag').textContent = card.dataset.categoria.toUpperCase();
@@ -1188,7 +1097,7 @@ cards.forEach(card => {
   });
 });
 
-// Territórios → modais específicos
+// Territórios -> modais específicos
 document.querySelectorAll('.territorio').forEach(t => {
   t.addEventListener('click', () => {
     const nome = t.dataset.territorio;
@@ -1220,14 +1129,14 @@ document.querySelectorAll('.territorio').forEach(t => {
 // Modal geral
 function openModal(tipo) {
   const modais = {
-    'colecao': { tag: 'Coleção', titulo: 'Coleção atual — "Matéria Bruta"', desc: 'A primeira coleção da Visão do Caos reúne peças que traduzem o conceito de transformar a matéria bruta da realidade em forma.', tags: ['Edição limitada', 'Serigrafia', 'Autoral', '2026'] },
+    'colecao': { tag: 'Coleção', titulo: 'Coleção atual: Matéria Bruta', desc: 'A primeira coleção da Visão do Caos reúne peças que traduzem o conceito de transformar a matéria bruta da realidade em forma.', tags: ['Edição limitada', 'Serigrafia', 'Autoral', '2026'] },
     'colab': { tag: 'Colabore', titulo: 'Envie sua proposta', desc: 'Se você é artista, designer, músico, escritor ou criador independente e quer colaborar com a Visão do Caos, envie uma mensagem contando sobre seu trabalho.', tags: ['Artistas', 'Designers', 'Músicos', 'Escritores'] },
-    'contato': { tag: 'Contato', titulo: 'Fale com a gente', desc: 'Para parcerias, propostas editoriais, projetos especiais ou qualquer conversa que faça sentido — entre em contato.', tags: ['Parcerias', 'Editorial', 'Projetos'] },
+    'contato': { tag: 'Contato', titulo: 'Fale com a gente', desc: 'Para parcerias, propostas editoriais, projetos especiais ou qualquer conversa que faça sentido, entre em contato.', tags: ['Parcerias', 'Editorial', 'Projetos'] },
     'imprensa': { tag: 'Imprensa', titulo: 'Imprensa', desc: 'Para solicitações de imprensa, entrevistas, materiais e informações sobre a plataforma, entre em contato.', tags: ['Entrevistas', 'Materiais', 'Informações'] },
-    'produto-camiseta': { tag: 'Produto', titulo: 'Camiseta "Matéria Bruta"', desc: 'Camiseta em algodão 100% com serigrafia artesanal. Estampa exclusiva da coleção "Matéria Bruta".', tags: ['Algodão 100%', 'Serigrafia', 'Unissex', 'R$ 89'] },
-    'produto-poster': { tag: 'Produto', titulo: 'Pôster "Do Caos à Forma"', desc: 'Pôster em papel offset 180g, formato 50x70cm. Impressão em serigrafia com duas cores. Edição limitada.', tags: ['Offset 180g', '50x70cm', 'Edição limitada', 'R$ 45'] },
-    'produto-print': { tag: 'Produto', titulo: 'Print "Olhar que Atravessa"', desc: 'Print em impressão giclée de alta qualidade, formato 30x40cm. Parte da série visual que investiga o olhar.', tags: ['Giclée', '30x40cm', 'Fine art', 'R$ 65'] },
-    'produto-adesivo': { tag: 'Produto', titulo: 'Kit Adesivos "Territórios"', desc: 'Kit com 5 adesivos em vinil resistente, representando os cinco territórios da plataforma.', tags: ['Vinil', '5 unidades', 'Kit', 'R$ 25'] }
+    'produto-camiseta': { tag: 'Produto', titulo: 'Camiseta Matéria Bruta', desc: 'Camiseta em algodão 100% com serigrafia artesanal. Estampa exclusiva da coleção.', tags: ['Algodão 100%', 'Serigrafia', 'Unissex', 'R$ 89'] },
+    'produto-poster': { tag: 'Produto', titulo: 'Pôster Do Caos à Forma', desc: 'Pôster em papel offset 180g, formato 50x70cm. Impressão em serigrafia com duas cores. Edição limitada.', tags: ['Offset 180g', '50x70cm', 'Edição limitada', 'R$ 45'] },
+    'produto-print': { tag: 'Produto', titulo: 'Print Olhar que Atravessa', desc: 'Print em impressão giclée de alta qualidade, formato 30x40cm. Parte da série visual que investiga o olhar.', tags: ['Giclée', '30x40cm', 'Fine art', 'R$ 65'] },
+    'produto-adesivo': { tag: 'Produto', titulo: 'Kit Adesivos Territórios', desc: 'Kit com 5 adesivos em vinil resistente, representando os cinco territórios da plataforma.', tags: ['Vinil', '5 unidades', 'Kit', 'R$ 25'] }
   };
   const data = modais[tipo];
   if (!data) return;
@@ -1296,104 +1205,15 @@ document.getElementById('modalCarrossel').addEventListener('click', (e) => {
   if (e.target.id === 'modalCarrossel') closeCarrossel();
 });
 
-// VITRINE MUSICAL COM DIAGNÓSTICO
-const audio = document.getElementById('audioPlayer');
-const iconPlay = document.getElementById('iconPlay');
-const iconPause = document.getElementById('iconPause');
-const barraProgresso = document.getElementById('barraProgresso');
-const tempoAtual = document.getElementById('tempoAtual');
-const tempoTotal = document.getElementById('tempoTotal');
-const playerErro = document.getElementById('playerErro');
-
-function mostrarErro(msg) {
-  playerErro.style.display = 'block';
-  playerErro.innerHTML = '<strong>⚠ Não foi possível tocar o áudio:</strong><br>' + msg;
-  console.error('Erro no player:', msg);
-}
-
+// VITRINE MUSICAL
 function openVitrine() {
   document.getElementById('modalOuvir').classList.add('active');
   document.body.style.overflow = 'hidden';
-  
-  // Teste: verifica se o arquivo existe
-  fetch('assets/track-destaquehora.mp3')
-    .then(r => {
-      if (!r.ok) throw new Error('Arquivo não encontrado (HTTP ' + r.status + ')');
-      const tipo = r.headers.get('content-type');
-      if (tipo && !tipo.includes('audio') && !tipo.includes('octet')) {
-        console.warn('MIME type suspeito:', tipo);
-      }
-    })
-    .catch(e => mostrarErro(e.message + '. Verifique se o arquivo está na pasta assets/ com o nome exato track-destaquehora.mp3'));
 }
 
 function closeVitrine() {
   document.getElementById('modalOuvir').classList.remove('active');
   document.body.style.overflow = '';
-  audio.pause();
-  iconPlay.style.display = 'block';
-  iconPause.style.display = 'none';
-}
-
-function togglePlay() {
-  if (audio.error) {
-    mostrarErro('Erro de carregamento. Código: ' + audio.error.code);
-    return;
-  }
-  if (audio.paused) {
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(e => {
-        mostrarErro('Navegador bloqueou o play: ' + e.message + '. Tente clicar novamente.');
-      });
-    }
-    iconPlay.style.display = 'none';
-    iconPause.style.display = 'block';
-  } else {
-    audio.pause();
-    iconPlay.style.display = 'block';
-    iconPause.style.display = 'none';
-  }
-}
-
-audio.addEventListener('error', () => {
-  const codes = { 1: 'Abortado', 2: 'Erro de rede', 3: 'Erro de decodificação', 4: 'Formato não suportado ou arquivo não encontrado' };
-  mostrarErro(codes[audio.error.code] || 'Erro desconhecido (código ' + audio.error.code + ')');
-  iconPlay.style.display = 'block';
-  iconPause.style.display = 'none';
-});
-
-audio.addEventListener('timeupdate', () => {
-  if (audio.duration) {
-    const percent = (audio.currentTime / audio.duration) * 100;
-    barraProgresso.style.width = percent + '%';
-    tempoAtual.textContent = formatarTempo(audio.currentTime);
-  }
-});
-
-audio.addEventListener('loadedmetadata', () => {
-  tempoTotal.textContent = formatarTempo(audio.duration);
-});
-
-audio.addEventListener('ended', () => {
-  iconPlay.style.display = 'block';
-  iconPause.style.display = 'none';
-  barraProgresso.style.width = '0%';
-});
-
-function formatarTempo(segundos) {
-  const min = Math.floor(segundos / 60);
-  const seg = Math.floor(segundos % 60);
-  return min + ':' + (seg < 10 ? '0' : '') + seg;
-}
-
-function seekAudio(event) {
-  const container = document.getElementById('barraContainer');
-  const rect = container.getBoundingClientRect();
-  const percent = (event.clientX - rect.left) / rect.width;
-  if (audio.duration) {
-    audio.currentTime = percent * audio.duration;
-  }
 }
 
 document.getElementById('modalOuvir').addEventListener('click', (e) => {
